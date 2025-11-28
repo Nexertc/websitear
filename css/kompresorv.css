@@ -1,0 +1,69 @@
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    input[type="file"] {
+      margin: 15px 0;
+      padding: 10px;
+      border: 2px dashed #4CAF50;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
+    }
+
+    button {
+      background: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #43a047;
+    }
+
+    img {
+      margin-top: 20px;
+      max-width: 95%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    #info {
+      margin-top: 15px;
+      font-size: 15px;
+      color: #333;
+    }
+
+    a.download {
+      display: inline-block;
+      margin-top: 12px;
+      color: #fff;
+      background: #2196F3;
+      padding: 10px 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a.download:hover {
+      background: #1976D2;
+    }
+  
