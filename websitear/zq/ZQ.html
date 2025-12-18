@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta  id="viewportMeta"  name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1e293b"/>
+  <meta name="google-site-verification" content="qgzj2-HwMojIITzK_BIGjusPE5iRge1In08xhyiwhqo" />
+  <title>ZapQuake Kalkulator - COC</title>
+  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="../css/style.css?v=1">
+  <link rel="stylesheet" href="../css/style2.css?v=1">
+<link rel="stylesheet" href="../css/media1.css?v=1">
+
+
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="websitear/img/nxc.png">
+<link rel="apple-touch-icon" href="https://nexertc.github.io/websitear/websitear/img/nxc.png">
+<link rel="shortcut icon" href="https://nexertc.github.io/websitear/websitear/img/nxc.png">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ardeva.NXC">
+<meta property="og:description" content="Website Ardeva Alghifari">
+<meta property="og:image" content="https://nexertc.github.io/websitear/websitear/img/ardeva.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://nexertc.github.io/websitear/">
+<meta property="og:site_name" content="Ardeva.NXC">
+
+
+</head>
+<body>
+
+  <header>Ardeva.NXC
+  <img src="../img/nxc.png" alt="nxc" class="nxc">
+  <div class="menu2" id="menuBtn">☰</div>
+  </header>
+
+  
+  <div class="side-menu" id="sideMenu">
+    <img src="../img/ardeva.png" alt="foto" class="sideimg">
+
+    <div class="side10">
+    <a class="a agelap a2" href="#" onclick="gelap()">Tema gelap</a>   
+    <a class="a" id="a" href='../../index.html'>Refres Website</a>
+    </div>
+
+    <div class="side10">    
+      <a class="a" id="a" href='../html/tentang.html'>Tentang Website</a>
+        <a class="av" href="#" onclick="desktopMode()">Mode Desktop</a>
+        <a href="https://github.com/Nexertc" class="a">Project</a>
+    </div>
+
+    <div class="side10">
+      <a href="https://ardevaalghifari.blogspot.com/" class="a">Blog</a>
+        <a href="https://www.tiktok.com/@nexertc?_r=1&_t=ZS-91lu3QryLqh" class="a">Konten</a>
+      <a href="https://sociabuzz.com/ardevanxc/tribe" class="a">Donate</a>
+    </div>
+  
+  </div>
+  <div class="overlay2" id="overlay2"></div>
+  
+  
+
+  <div class="container">
+    <h1>Kalkulator 
+      <span class="a2v">Fire</span>
+      <span class="a3v">Quake</span>
+    </h1>
+
+    <label for="zap-level"><p>Level Firebol:</p></label>
+    <select id="zap-level">
+      <option value="1">Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+      <option value="4">Level 4</option>
+      <option value="5">Level 5</option>
+      <option value="6">Level 6</option>
+      <option value="7">Level 7</option>
+      <option value="8">Level 8</option>
+      <option value="9">Level 9</option>
+      <option value="10">Level 10</option>
+      <option value="11">Level 11</option>
+      <option value="12">Level 12</option>
+      <option value="13">Level 13</option>
+      <option value="14">Level 14</option>
+      <option value="15">Level 15</option>
+      <option value="16">Level 16</option>
+      <option value="17">Level 17</option>
+      <option value="18">Level 18</option>
+      <option value="19">Level 19</option>
+      <option value="20">Level 20</option>
+      <option value="21">Level 21</option>
+      <option value="22">Level 22</option>
+      <option value="23">Level 23</option>
+      <option value="24">Level 24</option>
+       <option value="25">Level 25</option>
+      <option value="26">Level 26</option>
+      <option value="27">Level 27</option>
+    </select>
+
+    <label for="quake-level"><p>Level Earthquake Spell:</p></label>
+    <select id="quake-level">
+      <option value="1">Level 1</option>
+      <option value="2">Level 2</option>
+      <option value="3">Level 3</option>
+      <option value="4">Level 4</option>
+      <option value="5">Level 5</option>
+    </select>
+
+    <label for="target"><p>Pilih Target Bangunan:</p></label>
+    <select id="target">
+      <option value="Canon">Canon</option>
+      <option value="Archer_tower">Archer tower</option>
+      <option value="Mortar">Mortar</option>
+      <option value="bost_mortar">Mortar (Bost)</option>
+      <option value="air_defense">Air defense</option>
+      <option value="Wizard">Wizard Tower</option>
+      <option value="bost_wizard">Wizard (bost)</option>  
+      <option value="tesla">Tesla</option>
+      <option value="bost_tesla">Tesla (bost)</option>
+      <option value="Sweper">Air Sweper</option>
+      <option value="bom_tower">Bom Tower</option>
+      <option value="bost_BomTower">Bom Tower (Bost)</option>
+      <option value="xbow">X-bow</option>
+      <option value="bost_xbow">X Bow (Bost)</option>
+      <option value="inferno">Inferno tower</option>
+      <option value="bost_inferno">Inferno (bost)</option>  
+      <option value="Eagle">Eagle</option>
+      <option value="Ketapel">Ketapel</option>
+      <option value="Builder">Builder</option>
+      <option value="bost_builder">Builder (bost)</option>
+      <option value="Monolit">Monolit</option>
+      <option value="Spell_tower">Spell tower</option>
+      <option value="Canon_ganda">Canon ganda</option>
+      <option value="bost_CanonGanda">Canon ganda (bost)</option>
+      <option value="Multi_archer">Multi archer</option>
+      <option value="bost_MultiArcher">Multi archer (bost)</option>
+      <option value="fire_spriter">Fire Spriter</option>
+      <option value="bost_FireSpriter">Fire Spriter (bost)</option>
+      <option value="pilihan_GandaCanon">Menara pilihan ganda Canon</option>
+      <option value="bost_pilihan_GandaCanon">Menara pilihan ganda Canon (bost)</option>
+      <option value="pilihan_GandaArcher">Menara pilihan ganda Archer</option>
+      <option value="bost_pilihan_GandaArcher">Menara pilihan ganda Archer (bost)</option>
+    </select>
+
+    <label for="building-level"><p>Level Bangunan:</p></label>
+    <select id="building-level">
+      <option value="1">Level 1</option>
+    </select>
+
+    <div class="blade">
+      <div class="btn3" onclick="hitungGempaDuluBaruFireball()">Hitung Gempa Dulu + Fireball</div>
+      <div class="btn3" onclick="hitungQuakeOnly()">Hitung Gempa Saja</div>
+      <div class="btn3" onclick="window.location.href='../../index.html'">Kembali Ke Menu Utama</div>
+    </div>
+
+    <div class="blade">
+      <div id="hasil"></div>
+    </div>
+
+    <footer class="hidden-footer">
+      Kalkulator ZapQuake untuk menghitung berapa total petir gempa untuk menghancurkan bangunan
+    </footer>
+  </div>
+
+  <script src="script.js?v=2"></script>
+  <script src="../script/script2.js"></script>
+</body>
+</html>
+
+
+
