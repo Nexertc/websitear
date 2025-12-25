@@ -70,63 +70,45 @@ function hitungGempaDuluBaruFireball() {
   const buildingLevel = parseInt(document.getElementById("building-level").value);
 
   const fireDmg = fireballDamage[Math.min(fireLevel, fireballDamage.length - 1)];
-  const quakePercent = quakeDamage[Math.min(quakeLevel, quakeDamage.length - 1)];
+  const baseQuakePercent = quakeDamage[Math.min(quakeLevel, quakeDamage.length - 1)];
   const buildingArray = targetHP[target];
-
-  if (!buildingArray) {
-    document.getElementById("hasil").innerHTML = "⚠️ Target tidak ditemukan.";
-    return;
-  }
 
   let sisaHP = buildingArray[Math.min(buildingLevel, buildingArray.length - 1)];
   const hpAwal = sisaHP;
   let quakeCount = 0;
 
-  let detail = `
-    <b>Target: ${target.replace('_', ' ')} Level ${buildingLevel}</b><br>
-    HP Awal: ${hpAwal}<br>
-    Fireball Level ${fireLevel}: ${fireDmg} Damage<br>
-    Gempa Level ${quakeLevel}: ${(quakePercent * 100).toFixed(1)}%<br><br>
-  `;
+  let detail = `<b>Target: ${target.replace(/_/g, ' ')} Level ${buildingLevel}</b><br>HP Awal: ${hpAwal}<br><br>`;
 
-  // GEMPA
-  while (sisaHP > 0 && quakeCount < 20) {
-    if (sisaHP <= fireDmg) break;
+  // LOOP GEMPA (Maksimal biasanya orang bawa 1-4 gempa)
+  // Kita hitung gempa dulu sampai selesai (misal target kita adalah 2 gempa sesuai gambar)
+  const jumlahGempaYangDiinginkan = 2; 
 
-    const dmg = Math.floor(sisaHP * quakePercent);
+  for (let i = 1; i <= jumlahGempaYangDiinginkan; i++) {
+    // RUMUS PENGURANGAN DAMAGE GEMPA BERUNTUN:
+    // Damage = (Persentase / (2*i - 1)) * HP TOTAL AWAL
+    let currentQuakePercent = baseQuakePercent / (2 * i - 1);
+    let dmg = Math.floor(hpAwal * currentQuakePercent);
+    
     sisaHP -= dmg;
     quakeCount++;
-
-    detail += `Gempa ${quakeCount}: Damage ${dmg} → Sisa HP ${sisaHP}<br>`;
+    detail += `Gempa ${i}: Damage ${dmg} → Sisa HP ${sisaHP}<br>`;
   }
 
-  // FIREBALL
-  const sebelumFire = sisaHP;
-  sisaHP -= fireDmg;
-
-  detail += `<br>Sisa HP sebelum Fireball: ${sebelumFire}<br>`;
+  // FIREBALL DI AKHIR
+  detail += `<br><b>Setelah Gempa Selesai:</b><br>`;
+  detail += `Sisa HP sebelum Fireball: ${sisaHP}<br>`;
   detail += `Fireball Damage: ${fireDmg}<br>`;
-  detail += `Sisa HP akhir: ${sisaHP > 0 ? sisaHP : 0}<br><br>`;
+  
+  sisaHP -= fireDmg;
+  let sisaAkhir = sisaHP > 0 ? sisaHP : 0;
+  detail += `Sisa HP akhir: ${sisaAkhir}<br><br>`;
 
   if (sisaHP <= 0) {
-    detail += `💥 <b>Sukses!</b> ${quakeCount} Gempa + 1 Fireball`;
+    detail += `💥 <b>Sukses!</b> Bangunan hancur.`;
   } else {
-    detail += `⚠️ <b>Gagal!</b> Tambah Gempa / level spell`;
+    detail += `⚠️ <b>Gagal!</b> Bangunan sisa ${sisaAkhir} HP.`;
   }
 
-  document.getElementById("hasil").innerHTML =
-    detail + `<br><button id="tutup-button">Tutup</button>`;
-
-  document.getElementById("tutup-button").onclick = () => {
-    document.getElementById("hasil").innerHTML = "";
-  };
+  document.getElementById("hasil").innerHTML = detail;
 }
 
-// Inisialisasi
-updateBuildingLevels();
-document.getElementById("target").addEventListener("change", updateBuildingLevels);
-
-// Contoh event listener untuk tombol (sesuaikan dengan HTML Anda)
-// Misalnya, untuk tombol utama: document.getElementById("hitung-btn").addEventListener("click", hitungGempaDuluBaruFireball);
-// Untuk Gempa saja: document.getElementById("quake-only-btn").addEventListener("click", hitungQuakeOnly);
-// Untuk asli: document.getElementById("asli-btn").addEventListener("click", hitungZapQuakeAsli);
