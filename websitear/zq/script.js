@@ -202,13 +202,17 @@ function hitungQuakeOnly() {
     HP awal: ${hp}<br><br>
   `;
 
-  while (sisaHP > 0 && quakeCount < 20) {
-    const damageGempa = Math.floor(sisaHP * quakePercent);
-    sisaHP -= damageGempa;
-    quakeCount++;
-    detail += `Gempa ${quakeCount}: Damage ${damageGempa} → Sisa HP: ${sisaHP > 0 ? sisaHP : 0}<br>`;
-  }
+   while (sisaHP > 0 && quakeCount < 20) {
+  const damageGempa = Math.floor(sisaHP * quakePercent);
+  sisaHP -= damageGempa;
+  quakeCount++;
 
+  detail += `Gempa ${quakeCount}: Damage ${damageGempa} → Sisa HP: ${sisaHP > 0 ? sisaHP : 0}<br>`;
+
+  // Jika sudah bisa diselesaikan Fireball, hentikan
+  if (sisaHP <= fireDmg) break;
+}
+  
   document.getElementById("hasil").innerHTML = `
     ${detail}<br>
     <b>Total:</b><br>
