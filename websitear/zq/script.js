@@ -63,7 +63,6 @@ function updateBuildingLevels() {
   }
 }
 
-// ====================== FUNGSI UTAMA: GEMPA DULU, BARU FIREBALL ======================
 function hitungGempaDuluBaruFireball() {
   const fireLevel = parseInt(document.getElementById("zap-level").value);
   const quakeLevel = parseInt(document.getElementById("quake-level").value);
@@ -79,150 +78,48 @@ function hitungGempaDuluBaruFireball() {
     return;
   }
 
-  const hp = buildingArray[Math.min(buildingLevel, buildingArray.length - 1)];
-  let sisaHP = hp;
+  let sisaHP = buildingArray[Math.min(buildingLevel, buildingArray.length - 1)];
+  const hpAwal = sisaHP;
+  let quakeCount = 0;
 
   let detail = `
     <b>Target: ${target.replace('_', ' ')} Level ${buildingLevel}</b><br>
-    <b>HP Awal: ${hp}</b><br>
-    <b>Fireball Level ${fireLevel}: Damage ${fireDmg}</b><br>
-    <b>Gempa Level ${quakeLevel}: Persentase ${ (quakePercent * 100).toFixed(1) }%</b><br>
+    HP Awal: ${hpAwal}<br>
+    Fireball Level ${fireLevel}: ${fireDmg} Damage<br>
+    Gempa Level ${quakeLevel}: ${(quakePercent * 100).toFixed(1)}%<br><br>
   `;
 
-  // Hitung Gempa berturut-turut sampai sisa HP <= fireDmg (agar Fireball bisa menyelesaikan)
-  let quakeCount = 0;
-  while (sisaHP > fireDmg && quakeCount < 20) { // Batasi 20 kali untuk keamanan
-    const damageGempa = Math.floor(sisaHP * quakePercent);
-    sisaHP -= damageGempa;
+  // GEMPA
+  while (sisaHP > 0 && quakeCount < 20) {
+    if (sisaHP <= fireDmg) break;
+
+    const dmg = Math.floor(sisaHP * quakePercent);
+    sisaHP -= dmg;
     quakeCount++;
-    detail += `Gempa ${quakeCount}: Damage ${damageGempa} → Sisa HP: ${sisaHP > 0 ? sisaHP : 0}<br>`;
+
+    detail += `Gempa ${quakeCount}: Damage ${dmg} → Sisa HP ${sisaHP}<br>`;
   }
 
-  // Gunakan 1 Fireball untuk menyelesaikan sisa HP
-  const sisaSebelumFireball = sisaHP;
+  // FIREBALL
+  const sebelumFire = sisaHP;
   sisaHP -= fireDmg;
-  detail += `<br><b>Setelah ${quakeCount} Gempa:</b><br>`;
-  detail += `Sisa HP sebelum Fireball: ${sisaSebelumFireball}<br>`;
+
+  detail += `<br>Sisa HP sebelum Fireball: ${sebelumFire}<br>`;
   detail += `Fireball Damage: ${fireDmg}<br>`;
   detail += `Sisa HP akhir: ${sisaHP > 0 ? sisaHP : 0}<br><br>`;
 
   if (sisaHP <= 0) {
-    detail += `💥 <b>Sukses!</b> Bangunan dihancurkan dengan ${quakeCount} Gempa + 1 Fireball.`;
+    detail += `💥 <b>Sukses!</b> ${quakeCount} Gempa + 1 Fireball`;
   } else {
-    detail += `⚠️ <b>Gagal!</b> Bangunan masih bertahan (${sisaHP} HP tersisa). Coba tingkatkan level Gempa/Fireball atau tambah Gempa.`;
+    detail += `⚠️ <b>Gagal!</b> Tambah Gempa / level spell`;
   }
 
-  document.getElementById("hasil").innerHTML = detail + `<br><button id="tutup-button">Tutup</button>`;
+  document.getElementById("hasil").innerHTML =
+    detail + `<br><button id="tutup-button">Tutup</button>`;
 
-  document.getElementById("tutup-button").addEventListener("click", () => {
+  document.getElementById("tutup-button").onclick = () => {
     document.getElementById("hasil").innerHTML = "";
-  });
-}
-
-// ====================== FUNGSI ASLI (FIREBALL DULU, BARU GEMPA) - UNTUK BANDINGAN ======================
-function hitungZapQuakeAsli() {
-  const fireLevel = parseInt(document.getElementById("zap-level").value);
-  const quakeLevel = parseInt(document.getElementById("quake-level").value);
-  const target = document.getElementById("target").value;
-  const buildingLevel = parseInt(document.getElementById("building-level").value);
-
-  const fireDmg = fireballDamage[Math.min(fireLevel, fireballDamage.length - 1)];
-  const quakePercent = quakeDamage[Math.min(quakeLevel, quakeDamage.length - 1)];
-  const buildingArray = targetHP[target];
-
-  if (!buildingArray) {
-    document.getElementById("hasil").innerHTML = "⚠️ Target tidak ditemukan.";
-    return;
-  }
-
-  const hp = buildingArray[Math.min(buildingLevel, buildingArray.length - 1)];
-  let sisaHP = hp - fireDmg;
-
-  let detail = `
-    <b>Fireball (Level ${fireLevel})</b><br>
-    Damage: ${fireDmg}<br>
-    HP awal: ${hp}<br>
-    Sisa HP: ${sisaHP > 0 ? sisaHP : 0}<br><br>
-  `;
-
-  if (sisaHP <= 0) {
-    document.getElementById("hasil").innerHTML = `
-      🔥 <b>1 Fireball</b> sudah cukup menghancurkan ${target.replace('_', ' ')}!<br><br>
-      ${detail}
-      <button id="tutup-button">Tutup</button>
-    `;
-    document.getElementById("tutup-button").addEventListener("click", () => {
-      document.getElementById("hasil").innerHTML = "";
-    });
-    return;
-  }
-
-  let quakeCount = 0;
-  while (sisaHP > 0 && quakeCount < 10) {
-    const damageGempa = Math.floor(sisaHP * quakePercent);
-    sisaHP -= damageGempa;
-    quakeCount++;
-    detail += `Gempa ${quakeCount}: Damage ${damageGempa} → Sisa HP: ${sisaHP > 0 ? sisaHP : 0}<br>`;
-  }
-
-  const totalGempa = quakeCount;
-
-  document.getElementById("hasil").innerHTML = `
-    ${detail}<br>
-    <b>Total:</b><br>
-    1 Fireball + ${totalGempa} Gempa menghancurkan ${target.replace('_', ' ')} 💥<br><br>
-    <button id="tutup-button">Tutup</button>
-  `;
-
-  document.getElementById("tutup-button").addEventListener("click", () => {
-    document.getElementById("hasil").innerHTML = "";
-  });
-}
-
-// ====================== FUNGSI: GEMPA SAJA (TANPA FIREBALL) ======================
-function hitungQuakeOnly() {
-  const quakeLevel = parseInt(document.getElementById("quake-level").value);
-  const target = document.getElementById("target").value;
-  const buildingLevel = parseInt(document.getElementById("building-level").value);
-
-  const quakePercent = quakeDamage[Math.min(quakeLevel, quakeDamage.length - 1)];
-  const buildingArray = targetHP[target];
-
-  if (!buildingArray) {
-    document.getElementById("hasil").innerHTML = "⚠️ Target tidak ditemukan.";
-    return;
-  }
-
-  const hp = buildingArray[Math.min(buildingLevel, buildingArray.length - 1)];
-  let sisaHP = hp;
-  let quakeCount = 0;
-  let detail = `
-    <b>Gempa Saja (Level ${quakeLevel})</b><br>
-    Persentase: ${(quakePercent * 100).toFixed(1)}%<br>
-    HP awal: ${hp}<br><br>
-  `;
-
-   while (sisaHP > 0 && quakeCount < 20) {
-  const damageGempa = Math.floor(sisaHP * quakePercent);
-  sisaHP -= damageGempa;
-  quakeCount++;
-
-  detail += `Gempa ${quakeCount}: Damage ${damageGempa} → Sisa HP: ${sisaHP > 0 ? sisaHP : 0}<br>`;
-
-  // Jika sudah bisa diselesaikan Fireball, hentikan
-  if (sisaHP <= fireDmg) break;
-}
-  
-  document.getElementById("hasil").innerHTML = `
-    ${detail}<br>
-    <b>Total:</b><br>
-    ${quakeCount} Gempa dibutuhkan untuk menghancurkan ${target.replace('_', ' ')} 🌍<br><br>
-    <button id="tutup-button">Tutup</button>
-  `;
-
-  document.getElementById("tutup-button").addEventListener("click", () => {
-    document.getElementById("hasil").innerHTML = "";
-  });
+  };
 }
 
 // Inisialisasi
