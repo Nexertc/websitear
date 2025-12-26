@@ -1,0 +1,186 @@
+.pg{
+  font-size: 1rem;
+  color: black;
+  text-align: justify;
+  margin-left: 6vw;
+   margin-right: 6vw;
+  line-height: 1.5rem;
+}
+.elemen10, .elemen11 {
+  width: 100%;
+  margin-top: 13vw;
+  background: none;   
+}
+.elemen10{
+ display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.elemen11{
+  margin-top: 1vw;
+}
+
+.bac{
+  width: 90%;
+  border: none;
+  margin-top: 30vw;
+}
+
+.btn10{
+  width: 90%;
+  padding: 3vw;
+  font-size: 1rem;
+   background: linear-gradient(90deg, #454afa, #2429df);
+   color: white;
+   border-radius: 2vw;
+   border: none;
+   margin-bottom: 10vw;
+}
+.btn10:hover{
+  box-shadow: 0 0 1.5vw #454afa;
+}
+
+
+.elemen10 h3{
+  text-align: center;
+  font-size: 1.5rem;
+  color: #454afa;
+  margin: 3vw;
+}
+
+.ad{
+  text-decoration: none;
+  color: #454afa;
+}
+
+.imgm2{
+  width: 80%;
+  border-radius: 2vw;
+  margin-top: 6vw;
+}
+
+.desxc, .desxc2{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2vw;
+  align-items: start;
+  margin-bottom: 2vw;
+}
+
+.imgxc{
+  width: 100%;
+  border: 0.5vw solid gold;
+  border-radius: 1.5vw;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.desxc a, .desxc2 a{
+  width: 25%;
+}
+
+.p10v{
+  text-align: left;
+  width: 100%;
+ margin-bottom: 0;
+ font-size: 1.1rem;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width:900px){
+
+  section{
+    width: 60%;
+  }
+
+  .btn10{
+    width: 50%;
+    padding: 2vw;
+    border-radius: 1vw;
+    margin-top: 4vw;
+  }
+
+
+  .elemen10{
+    margin-top: 6vw;
+  }
+
+
+
+  .imgxc{
+    display: block;
+    width: 100%;
+    border-radius: 1vw;
+    border: 0.2vw solid gold;
+  }
+
+  
+  .desxc::-webkit-scrollbar{
+    display: none;
+  }
+  .desxc2::-webkit-scrollbar{
+    display: none;
+  }
+
+
+
+  .desxc, .desxc2{
+    display: flex;
+  width: 100%;
+  justify-content: start;
+  gap: 0;
+  align-items: start;
+  margin-bottom: 2vw;
+    overflow-y: auto;
+    padding-bottom: 10vw;
+    flex-direction: column;
+    width: 20%;
+    position: fixed;
+    top: 0;
+      gap: 2vw;
+       box-sizing: border-box;
+        height: 100%;
+    padding-top: 10vw;
+  }
+
+  .desxc{
+    right: 1vw;
+    border-left: 0.25vw solid #454afa;
+    padding-left: 2vw;
+  }
+
+
+    
+  .desxc2{
+    left: 1vw;
+    border-right: 0.25vw solid #454afa;
+    padding-right: 2vw;
+  }
+
+  .desxc a, .desxc2 a{
+    width: 100%;
+  }
+
+  .imgxc{
+    object-fit: contain;
+    height: auto;
+  }
+
+  .p10v{
+    width: 50%;
+  }
+  
+
+}
