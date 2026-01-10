@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membuat LinkTree Sederhana menggunakan html css dan js</title>
+   <link rel="icon" type="image/png" href="../img/nxc.png">
+<link rel="stylesheet" href="../css/style.css?v=1">
+<link rel="stylesheet" href="../css/style2.css?v=1">
+<link rel="stylesheet" href="../css/media1.css?v=1">
+<link rel="stylesheet" href="../css/linktre.css?v=1">
+</head>
+<body>
+ <header>
+  
+<div class="drafnxc">
+  <h5 class="dolar blog" onclick="window.location.href='../../index.html'">Kembali</h5>
+  <h5 class="dolar blog" onclick="window.location.href='https://ardevaalghifari.blogspot.com/'">Blog</h5>
+   <h5 class="dolar dukungan" onclick="window.location.href='https://sociabuzz.com/ardevanxc/tribe'">Dukungan</h5>
+  <h5 class="dolar" onclick="window.location.href='../html/tentang.html'">Nexertc</h5>
+  <img src="../img/nxc.png" alt="nxc" class="nxc">
+</div>
+<div class="menu2" id="menuBtn">☰</div>
+ </header>  
+
+  
+  <div class="side-menu" id="sideMenu">
+    <img src="../img/ardeva.png" alt="foto" class="sideimg">
+
+    <div class="side10">
+    <a class="a agelap a2" href="#" onclick="gelap()">Tema gelap</a>   
+    <a class="a" id="a" href='index.html'>Refres Website</a>
+    </div>
+
+    <div class="side10">    
+      <a class="a" id="a" href='tentang.html'>Tentang Website</a>
+        <a class="av" href="#" onclick="desktopMode()">Mode Desktop</a>
+        <a href="https://github.com/Nexertc" class="a">Project</a>
+    </div>
+
+    <div class="side10">
+      <a href="https://ardevaalghifari.blogspot.com/" class="a">Blog</a>
+        <a href="https://www.tiktok.com/@nexertc?_r=1&_t=ZS-91lu3QryLqh" class="a">Konten</a>
+      <a href="https://sociabuzz.com/ardevanxc/tribe" class="a">Donate</a>
+    </div>
+  
+  </div>
+  <div class="overlay2" id="overlay2"></div>
+  
+  
+  <img class="bac" src="../img/linktree1.png"  alt="foto">
+  
+  <section class="sectr">
+  <div class="elemen10">
+
+ <h2 class="h2l">HTML</h2>
+<div class="bit">
+    <button onclick="salin1()" class="btnl">📄</button>
+<pre id="teksc1">
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br>
+    &lt;title&gt;LinkTree&lt;/title&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+  &lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;menu2&quot;&gt;
+        &lt;img class=&quot;bac&quot; src=&quot;https://nexertc.github.io/websitear/img/ardeva.png&quot; alt=&quot;Ardeva Alghifari&quot;&gt;
+        &lt;h2 class=&quot;h2v&quot;&gt;Ardeva Alghifari&lt;/h2&gt; <br>
+        &lt;button class=&quot;btn&quot; onclick=&quot;klik1()&quot;&gt;
+            Kunjungi Youtube Saya
+        &lt;/button&gt;
+
+        &lt;button class=&quot;btn&quot; onclick=&quot;klik2()&quot;&gt;
+            Kunjungi Instagram Saya
+        &lt;/button&gt; <br>
+        &lt;button class=&quot;btn&quot; onclick=&quot;klik3()&quot;&gt;
+            Kunjungi TikTok Saya
+        &lt;/button&gt;<br>
+        &lt;button class=&quot;btn&quot; onclick=&quot;klik4()&quot;&gt;
+            Kunjungi GitHub Saya
+        &lt;/button&gt; <br>
+    &lt;/div&gt; <br>
+&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;<br>
+
+
+</pre>
+</div>
+
+<h2 class="h2l">CSS</h2>
+<div class="bit">
+    <button onclick="salin2()" class="btnl">📄</button>
+    <pre id="teksc2">
+body{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e4f91, #6ab7ff, #ffffff);
+    padding: 4vw;
+}
+.menu2{
+    width: 60%;
+    border-radius: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #ffffff;
+    overflow: hidden;
+    padding-bottom: 3vw;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.btn{
+    width: 22vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    margin-top: 1.5vw;
+    background: rgb(74, 74, 236);
+    border: none;
+    color: white;
+    font-size: 1rem;
+}
+    </pre>
+</div>
+
+<h2 class="h2l">JavaScript</h2>
+<div class="bit">
+    <button onclick="salin3()" class="btnl">📄</button>
+<pre id="teksc3">
+  
+function klik1(){
+    window.location.href='https://youtube.com/@ardevaalghifari'; //bisa diganti menggunakan url anda sendiri
+}
+function klik2(){
+    window.location.href='https://www.instagram.com/avealgh'; //bisa diganti menggunakan url anda sendiri
+}
+function klik3(){
+    window.location.href='#'; //bisa diganti menggunakan url anda sendiri
+}
+function klik4(){
+    window.location.href='https://github.com/Nexertc'; //bisa diganti menggunakan url anda sendiri
+}
+
+</pre>
+</div>
+
+
+  </div>
+</section>
+
+
+
+ <section>
+  <div class="elemen10">
+    <p class="pg">
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cara nya adalah buat folder baru dengan nama bebas lalu 
+  kalian buat file bernama index.html, style.css, dan script.js
+    lalu kalian salin kode diatas pada masing-masing file tersebut.
+    setelah disalin, kalian ubah url nya dengan url sosial media kalian 
+    masing masing. setelah itu kalian buka file index.html nya di browser.
+    maka akan muncul tampilan linktree tersebut. begitulah cara membuat 
+    webisite Linktree menggunakan 
+    <a href="../html/penjelasanHtml.html" class="ad">html</a>,
+    <a href="../html/penjelasanCss.html" class="ad">css</a>, dan
+     <a href="../html/pembelajaranJs.html" class="ad">javascript</a>. 
+    semoga ini bisa membantu anda semua yang ingin membuat Linktree menggunakan 
+    sistem berbasis code, terimakasih sudah mengunjungi website saya..
+    </p>
+  </div>
+</section>
+
+
+
+<section>
+    <div class="elemen10">
+       
+        <h3>Hasil LinkTree setelah selesai disalin</h3>
+
+        <img src="../img/linktreeimg.png" alt="imglink" class="imgli">
+        
+    </div>
+</section>
+
+
+<section>
+  <div class="elemen10">
+    <p class="pg">
+ &nbsp;&nbsp;Anda juga bisa mengubah tampilan nya,
+ terimakasih sudah mengunjugi website saya anda juga bisa melihat 
+ halaman tentang <a class="ad" href="../html/penjelasanHtml.html">html</a>,
+ <a class="ad" href="../html/penjelasanCss.html">css</a>, ataupun 
+<a class="ad" href="../html/pembelajaranJs.html">javascript</a>, mohon 
+maaf bila ada kesalahannya dari saya sekian dan terimakasih 
+wassalamualaikum.wr.wb.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<button class="btn10" onclick="window.location.href='../../index.html'">
+  Kembali ke Halaman Utama
+</button>
+
+
+
+<footer>
+  <div class="bgfooter">
+    <di class="ofafo"></di>
+    <img src="../img/nxc2.png" alt="nxcfo" class="nxcfo">
+    <div class="desfo">
+     <p class="pfo">
+      Website ini dibuat oleh seseorang 
+bernama Ardeva alghifari 
+     </p>
+
+<button class="btnfo" onclick="window.location.href='../html/tentang.html'">Pelajari lebih lanjut</button>
+    </div>
+  </div> 
+
+ <div class="ftrc">
+ <div class="conta">
+ <a class="afoter" href="tentang.html">Tentang Website</a>
+ <a class="afoter" href="penjelasanHtml.html">Tentang Html</a>
+ <a class="afoter" href="penjelasanCss.html">Tentang Css</a>
+ </div>
+ <div class="conta">
+   <a class="afoter" onclick="gelap()">Tema gelap</a>
+ <a class="afoter" href="websitear/zq/ZQ.html">ZapQuake</a>
+ <a class="afoter" href="https://www.instagram.com/avealgh?igsh=MTc5Z2dtMWtkMzFsbQ==">Tentang Instragram</a>
+ </div>
+ <div class="conta">
+   <a class="afoter" href="https://youtube.com/@ardevaalghifari?si=iQZoFWeuokI1YmQE">Youtube</a>
+ <a class="afoter" href="https://sociabuzz.com/ardevanxc/tribe">Dukungan</a>
+ <a class="afoter" href="https://github.com/Nexertc">GitHub</a>
+ </div>
+ </div>
+</footer>
+<script src="../script/script2.js?v=1"></script>
+<script src="../script/linktree1.js"></script>
+</body>
+</html>

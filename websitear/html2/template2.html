@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Website Portofolio</title>
+<link rel="stylesheet" href="../css/style.css?v=1">
+<link rel="stylesheet" href="../css/style2.css?v=1">
+<link rel="stylesheet" href="../css/media1.css?v=1">
+<link rel="stylesheet" href="../css/linktre.css?v=1">
+
+
+ <link rel="icon" type="image/png" href="websitear/img/nxc.png">
+<link rel="apple-touch-icon" href="https://nexertc.github.io/websitear/websitear/img/nxc.png">
+<link rel="shortcut icon" href="https://nexertc.github.io/websitear/websitear/img/nxc.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nexertc">
+  <meta property="og:description" content="Template Website">
+  <meta property="og:image" content="https://nexertc.github.io/websitear/websitear/img/portofolioimg.png">
+  <meta property="og:url" content="https://nexertc.github.io/websitear/">
+  <meta property="og:site_name" content="Nexertc">
+
+</head>
+<body>
+  <header>Ardeva.NXC
+  <img src="../img/nxc.png" alt="nxc" class="nxc">
+  <div class="menu2" id="menuBtn">☰</div>
+  </header>
+  <div class="side-menu" id="sideMenu">
+    <img src="../img/ardeva.png" alt="foto" class="sideimg">
+
+    <div class="side10">
+    <a class="a agelap a2" href="#" onclick="gelap()">Tema gelap</a>   
+    <a class="a" id="a" href='index.html'>Refres Website</a>
+    </div>
+
+    <div class="side10">    
+      <a class="a" id="a" href='tentang.html'>Tentang Website</a>
+        <a class="av" href="#" onclick="desktopMode()">Mode Desktop</a>
+        <a href="https://github.com/Nexertc" class="a">Project</a>
+    </div>
+
+    <div class="side10">
+      <a href="https://ardevaalghifari.blogspot.com/" class="a">Blog</a>
+        <a href="https://www.tiktok.com/@nexertc?_r=1&_t=ZS-91lu3QryLqh" class="a">Konten</a>
+      <a href="https://sociabuzz.com/ardevanxc/tribe" class="a">Donate</a>
+    </div>
+  
+  </div>
+  <div class="overlay2" id="overlay2"></div> 
+  <img class="bac" src="../img/portofolioimg.png"  alt="foto">
+  
+
+  <section class="sectr">
+  <div class="elemen10">
+
+    <p class="pg">
+      <p class="p10v">Note Website:</p>
+   <ul class="ul1">
+    <li>Cara menggunakannya adalah.</li>
+    <li>Buat file Html, Css dan, JavaScript dalam satu folder.</li>
+    <li>Copy semua kode di bawah ini dan paste sesuai ekstensi file tersebut.</li>
+      <li>Website bisa anda ubah sesuai kebutuhan.</li>
+      <li>Seperti pada hyperlink, gambar, dll.</li>
+      <li>website nya juga bisa anda tambahkan sesuai kebutuhan anda.</li>
+      <li>Terimakasih sudah mengunjungi halaman ini.</li>
+   </ul>
+    </p>
+
+ <h2 class="h2l">HTML</h2>
+<div class="bit">
+    <button onclick="salin1()" class="btnl">📄</button>
+<pre id="teksc1">
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;id&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;Creative Portfolio | Glassmorphism Style&lt;/title&gt;
+
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css&quot;&gt;
+  &lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&amp;display=swap&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;container&quot;&gt;
+
+    &lt;header class=&quot;glass-card&quot;&gt;
+      &lt;img src=&quot;https://nexertc.github.io/websitear/websitear/img/nxc.png&quot; alt=&quot;Foto Profil&quot; class=&quot;profile-img&quot;&gt;
+      &lt;h1&gt;Halo, Saya [Nama]&lt;/h1&gt;
+      &lt;p&gt;UI Designer &amp; Digital Storyteller dari Jakarta&lt;/p&gt;
+
+      &lt;div class=&quot;skills&quot;&gt;
+        &lt;span class=&quot;skill-badge&quot;&gt;Figma&lt;/span&gt;
+        &lt;span class=&quot;skill-badge&quot;&gt;HTML/CSS&lt;/span&gt;
+        &lt;span class=&quot;skill-badge&quot;&gt;Branding&lt;/span&gt;
+        &lt;span class=&quot;skill-badge&quot;&gt;Adobe CC&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
+
+    &lt;section class=&quot;project-section&quot;&gt;
+      &lt;h2 class=&quot;section-title&quot;&gt;Portofolio Projek&lt;/h2&gt;
+
+      &lt;div class=&quot;grid&quot;&gt;
+        &lt;div class=&quot;project-item glass-card&quot;&gt;
+          &lt;div class=&quot;project-icon&quot;&gt;&lt;i class=&quot;fas fa-palette&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;h3&gt;Brand Identity&lt;/h3&gt;
+          &lt;p&gt;Menciptakan logo dan palet warna untuk startup kopi lokal.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;project-item glass-card&quot;&gt;
+          &lt;div class=&quot;project-icon&quot;&gt;&lt;i class=&quot;fas fa-mobile-alt&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;h3&gt;Mobile App&lt;/h3&gt;
+          &lt;p&gt;Desain antarmuka aplikasi meditasi yang menenangkan.&lt;/p&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;project-item glass-card&quot;&gt;
+          &lt;div class=&quot;project-icon&quot;&gt;&lt;i class=&quot;fas fa-laptop-code&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+          &lt;h3&gt;Web Design&lt;/h3&gt;
+          &lt;p&gt;Landing page modern dengan fokus pada konversi pengguna.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class=&quot;contact glass-card&quot;&gt;
+      &lt;h2&gt;Mari Berkolaborasi&lt;/h2&gt;
+      &lt;p&gt;Saya selalu terbuka untuk proyek baru atau sekadar menyapa.&lt;/p&gt;
+
+      &lt;div class=&quot;socials&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;social-btn&quot;&gt;&lt;i class=&quot;fab fa-instagram&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;social-btn&quot;&gt;&lt;i class=&quot;fab fa-linkedin-in&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;social-btn&quot;&gt;&lt;i class=&quot;fab fa-dribbble&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;social-btn&quot;&gt;&lt;i class=&quot;fas fa-envelope&quot;&gt;&lt;/i&gt;&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+  &lt;/div&gt;
+
+  &lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+&lt;!--Kunjungi Website saya: nexertc.github.io/websitear--&gt;
+
+</pre>
+</div>
+
+<h2 class="h2l">CSS</h2>
+<div class="bit">
+    <button onclick="salin2()" class="btnl">📄</button>
+    <pre id="teksc2">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(45deg, #f3e7e9 0%, #e3eeff 100%);
+  min-height: 100vh;
+  color: #444;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+}
+
+/* Header */
+header {
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 40px;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 5px solid white;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.skills {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.skill-badge {
+  background: white;
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-weight: 600;
+  color: #6c5ce7;
+}
+
+/* Project */
+.project-section {
+  padding: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.project-item {
+  padding: 20px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.project-icon {
+  font-size: 2.5rem;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Contact */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.social-btn {
+  display: inline-flex;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  margin: 0 10px;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+.social-btn:hover {
+  background: #6c5ce7;
+  color: white;
+  transform: rotate(360deg);
+}
+
+    </pre>
+</div>
+
+<h2 class="h2l">JavaScript</h2>
+<div class="bit">
+    <button onclick="salin3()" class="btnl">📄</button>
+<pre id="teksc3">
+window.addEventListener('scroll', () => {
+  const cards = document.querySelectorAll('.glass-card');
+
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    }
+  });
+});
+
+document.querySelectorAll('.glass-card').forEach(card => {
+  card.style.opacity = '0';
+  card.style.transform = 'translateY(20px)';
+  card.style.transition = 'all 0.6s ease-out';
+});
+
+window.dispatchEvent(new Event('scroll'));
+
+</pre>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+<section>
+    <div class="elemen10">
+       
+        <h3>Hasil Website</h3>
+
+        <img src="../img/twebsite3.png" alt="imglink" class="imgli">
+        
+    </div>
+</section>
+
+
+<section>
+  <div class="elemen10">
+    <p class="pg">
+ &nbsp;&nbsp;Anda juga bisa mengubah tampilan nya,
+ terimakasih sudah mengunjugi website saya anda juga bisa melihat 
+ halaman tentang <a class="ad" href="../html/penjelasanHtml.html">html</a>,
+ <a class="ad" href="../html/penjelasanCss.html">css</a>, ataupun 
+<a class="ad" href="../html/pembelajaranJs.html">javascript</a>, mohon 
+maaf bila ada kesalahannya dari saya sekian dan terimakasih 
+wassalamualaikum.wr.wb.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<button class="btn10" onclick="window.location.href='../../index.html'">
+  Kembali ke Halaman Utama
+</button>
+  <div class="desxc">
+  <a href="../html/penjelasanHtml.html">
+    <img src="../img/html5.jpg" alt="HTML" class="imgxc">
+  </a>
+
+  <a href="../html/penjelasanCss.html">
+    <img src="../img/css.png" alt="CSS" class="imgxc">
+  </a>
+
+  <a href="../html/pembelajaranJs.html">
+    <img src="../img/javascript.png" alt="JavaScript" class="imgxc">
+  </a>
+</div>
+<div class="desxc2">
+  <a href="../html/hostinggithub.html">
+    <img src="../img/github2img.png" alt="GitHub" class="imgxc">
+  </a>
+
+  <a href="../html/kompresorv.html">
+    <img src="../img/kompresfoto.jpg" alt="Kompres Gambar" class="imgxc">
+  </a>
+
+  <a href="../html/mcgg.html">
+    <img src="../img/bgmc.jpg" alt="Background Music" class="imgxc">
+  </a>
+</div>
+<script src="../script/script2.js?v=1"></script>
+<script src="../script/linktree1.js"></script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Template Website Ladinge Pages</title>
+<link rel="stylesheet" href="../css/style.css?v=1">
+<link rel="stylesheet" href="../css/style2.css?v=1">
+<link rel="stylesheet" href="../css/media1.css?v=1">
+<link rel="stylesheet" href="../css/linktre.css?v=1">
+
+
+ <link rel="icon" type="image/png" href="websitear/img/nxc.png">
+<link rel="apple-touch-icon" href="https://nexertc.github.io/websitear/websitear/img/twebsite.jpg">
+<link rel="shortcut icon" href="https://nexertc.github.io/websitear/websitear/img/twebsite.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Nexertc">
+  <meta property="og:description" content="Template Website">
+  <meta property="og:image" content="https://nexertc.github.io/websitear/websitear/img/twebsite.jpg">
+  <meta property="og:url" content="https://nexertc.github.io/websitear/">
+  <meta property="og:site_name" content="Nexertc">
+
+</head>
+<body>
+  <header>Ardeva.NXC
+  <img src="../img/nxc.png" alt="nxc" class="nxc">
+  <div class="menu2" id="menuBtn">☰</div>
+  </header>
+  <div class="side-menu" id="sideMenu">
+    <img src="../img/ardeva.png" alt="foto" class="sideimg">
+
+    <div class="side10">
+    <a class="a agelap a2" href="#" onclick="gelap()">Tema gelap</a>   
+    <a class="a" id="a" href='index.html'>Refres Website</a>
+    </div>
+
+    <div class="side10">    
+      <a class="a" id="a" href='tentang.html'>Tentang Website</a>
+        <a class="av" href="#" onclick="desktopMode()">Mode Desktop</a>
+        <a href="https://github.com/Nexertc" class="a">Project</a>
+    </div>
+
+    <div class="side10">
+      <a href="https://ardevaalghifari.blogspot.com/" class="a">Blog</a>
+        <a href="https://www.tiktok.com/@nexertc?_r=1&_t=ZS-91lu3QryLqh" class="a">Konten</a>
+      <a href="https://sociabuzz.com/ardevanxc/tribe" class="a">Donate</a>
+    </div>
+  
+  </div>
+  <div class="overlay2" id="overlay2"></div> 
+  <img class="bac" src="../img/twebsite.jpg"  alt="foto">
+  
+
+  <section class="sectr">
+  <div class="elemen10">
+
+    <p class="pg">
+      <p class="p10v">Note Website:</p>
+   <ul class="ul1">
+    <li>Cara menggunakannya adalah.</li>
+    <li>Buat file Html, Css dan, JavaScript dalam satu folder.</li>
+    <li>Copy semua kode di bawah ini dan paste sesuai ekstensi file tersebut.</li>
+      <li>Website bisa anda ubah sesuai kebutuhan.</li>
+      <li>Seperti pada hyperlink, gambar, dll.</li>
+      <li>website nya juga bisa anda tambahkan sesuai kebutuhan anda.</li>
+      <li>Terimakasih sudah mengunjungi halaman ini.</li>
+   </ul>
+    </p>
+
+ <h2 class="h2l">HTML</h2>
+<div class="bit">
+    <button onclick="salin1()" class="btnl">📄</button>
+<pre id="teksc1">
+
+&lt;!DOCTYPE html&gt;
+&lt;html lang="id"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Portofolio Saya - Responsive&lt;/title&gt;
+
+    &lt;link rel="stylesheet" href="style.css"&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;nav&gt;
+    &lt;div class="container"&gt;
+        &lt;a href="#" class="logo"&gt;BUDI.DEV&lt;/a&gt;
+        &lt;ul class="nav-links" id="navLinks"&gt; &lt;!-- bisa diganti sesuai kebutuhan anda --&gt;
+            &lt;li&gt;&lt;a href="#home"&gt;Beranda&lt;/a&gt;&lt;/li&gt;   &lt;!-- bisa diganti sesuai kebutuhan anda --&gt;
+            &lt;li&gt;&lt;a href="#portfolio"&gt;Projek&lt;/a&gt;&lt;/li&gt;  &lt;!-- bisa diganti sesuai kebutuhan anda --&gt;
+            &lt;li&gt;&lt;a href="#contact"&gt;Kontak&lt;/a&gt;&lt;/li&gt;  &lt;!-- bisa diganti sesuai kebutuhan anda --&gt;
+        &lt;/ul&gt;
+        &lt;div class="menu-toggle" onclick="toggleMenu()"&gt;
+            &lt;i class="fas fa-bars"&gt;&lt;/i&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+&lt;section class="hero" id="home"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="hero-flex"&gt;
+            &lt;div class="hero-text"&gt;
+                &lt;h1&gt;Halo, Saya &lt;br&gt;&lt;span&gt;[Nama Anda]&lt;/span&gt;&lt;/h1&gt;
+                &lt;p&gt;Web Developer yang fokus pada pembuatan website modern, cepat, dan responsif.&lt;/p&gt;
+                &lt;a href="#portfolio" class="btn"&gt;Lihat Projek Saya&lt;/a&gt;
+            &lt;/div&gt;
+            &lt;div class="hero-image"&gt;
+                &lt;img src="https://nexertc.github.io/websitear/websitear/img/nxc.png"&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;section class="portfolio" id="portfolio"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="section-title"&gt;
+            &lt;h2&gt;Projek Saya&lt;/h2&gt;
+            &lt;div&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+
+&lt;footer id="contact"&gt;
+    &lt;div class="container"&gt;
+        &lt;p&gt;Email: budi@contoh.com&lt;/p&gt;
+    &lt;/div&gt;
+&lt;/footer&gt;
+
+&lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+
+
+&lt;!--Kunjungi Website saya: nexertc.github.io/websitear--&gt;
+
+</pre>
+</div>
+
+<h2 class="h2l">CSS</h2>
+<div class="bit">
+    <button onclick="salin2()" class="btnl">📄</button>
+    <pre id="teksc2">
+
+      * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --primary: #2563eb;
+    --secondary: #64748b;
+    --dark: #0f172a;
+    --light: #f8fafc;
+}
+
+body {
+    background: var(--light);
+    color: var(--dark);
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+nav {
+    background: white;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.hero {
+    padding: 150px 0 80px;
+}
+
+.hero-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap-reverse;
+}
+
+.hero-image img {
+    width: 320px;
+    height: 320px;
+    border-radius: 30% 70% 70% 30%;
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+
+    </pre>
+</div>
+
+<h2 class="h2l">JavaScript</h2>
+<div class="bit">
+    <button onclick="salin3()" class="btnl">📄</button>
+<pre id="teksc3">
+
+  function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+}
+
+document.querySelectorAll(".nav-links a").forEach(link => {
+    link.addEventListener("click", () => {
+        document.getElementById("navLinks").classList.remove("active");
+    });
+});
+
+
+</pre>
+</div>
+
+
+  </div>
+</section>
+
+
+
+
+
+<section>
+    <div class="elemen10">
+       
+        <h3>Hasil Website</h3>
+
+        <img src="../img/twebsite2.png" alt="imglink" class="imgli">
+        
+    </div>
+</section>
+
+
+<section>
+  <div class="elemen10">
+    <p class="pg">
+ &nbsp;&nbsp;Anda juga bisa mengubah tampilan nya,
+ terimakasih sudah mengunjugi website saya anda juga bisa melihat 
+ halaman tentang <a class="ad" href="../html/penjelasanHtml.html">html</a>,
+ <a class="ad" href="../html/penjelasanCss.html">css</a>, ataupun 
+<a class="ad" href="../html/pembelajaranJs.html">javascript</a>, mohon 
+maaf bila ada kesalahannya dari saya sekian dan terimakasih 
+wassalamualaikum.wr.wb.
+    </p>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+<button class="btn10" onclick="window.location.href='../../index.html'">
+  Kembali ke Halaman Utama
+</button>
+  <div class="desxc">
+  <a href="../html/penjelasanHtml.html">
+    <img src="../img/html5.jpg" alt="HTML" class="imgxc">
+  </a>
+
+  <a href="../html/penjelasanCss.html">
+    <img src="../img/css.png" alt="CSS" class="imgxc">
+  </a>
+
+  <a href="../html/pembelajaranJs.html">
+    <img src="../img/javascript.png" alt="JavaScript" class="imgxc">
+  </a>
+</div>
+<div class="desxc2">
+  <a href="../html/hostinggithub.html">
+    <img src="../img/github2img.png" alt="GitHub" class="imgxc">
+  </a>
+
+  <a href="../html/kompresorv.html">
+    <img src="../img/kompresfoto.jpg" alt="Kompres Gambar" class="imgxc">
+  </a>
+
+  <a href="../html/mcgg.html">
+    <img src="../img/bgmc.jpg" alt="Background Music" class="imgxc">
+  </a>
+</div>
+<script src="../script/script2.js?v=1"></script>
+<script src="../script/linktree1.js"></script>
+</body>
+</html>
