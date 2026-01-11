@@ -35,29 +35,5 @@
           padding: 2vw;
           border-radius: 0.7vw;
         }  
-        .stativ{
-          width: 90%;
-          border: 0.2vw solid gold;
-        }
-        .bgsta img{
-            width: 15%;
-               border: 0.2vw solid gold;
-        }
-       .bgsta{
-        height: 15vw;
-       }
-       .bgsta h4{
-        font-size: 2rem;
-       }
-       .det{
-        font-size: 1.5rem;
-        padding: 4vw;
-        border: 0.2vw solid #4E95FF;
-        font-size: 1.1rem;
-       }
-       .gridsta{
-        margin-bottom: 3vw;
-          grid-template-columns: repeat(3, 1fr);
-          padding: 1vw;
-       }
+     
 }
