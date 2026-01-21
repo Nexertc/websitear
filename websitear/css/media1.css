@@ -389,10 +389,9 @@ border-bottom: 0.2vw solid #454afa;
         font-size: 2rem;
        }
        .det{
-        font-size: 1.5rem;
-        padding: 2vw;
+        padding: 1.5vw;
         border: 0.2vw solid #4E95FF;
-        font-size: 1.1rem;
+        font-size: 1rem;
         border-radius: 0.7vw;
         padding-left: 0;
        }
@@ -400,8 +399,8 @@ border-bottom: 0.2vw solid #454afa;
         margin-bottom: 3vw;
           grid-template-columns: repeat(2, 1fr);
           padding: 1vw;
-          padding-left: 3vw;
-          padding-right: 3vw;
+          padding-left: 5vw;
+          padding-right: 5vw;
        }
 
        .det p{
