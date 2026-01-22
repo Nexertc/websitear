@@ -45,7 +45,7 @@
 
 .elemen10 h3{
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #454afa;
   margin: 3vw;
 }
@@ -90,11 +90,12 @@
 
 }
 
-
-
-
-
-
+.nxc1v{
+  position: absolute;
+ top: 20vw;
+ border-radius: 1.5vw;
+ border: 0.5vw solid gold;
+}
 
 
 
@@ -181,6 +182,4 @@
   .p10v{
     width: 50%;
   }
-  
-
 }
