@@ -176,7 +176,7 @@ hr{
 .menu2{
   color: white;
   position: absolute;
-  left: 3vw;
+  left: 2vw;
   top: 0;
   z-index: 999;
   height: 100%;
@@ -184,6 +184,8 @@ hr{
   align-items: center;
   font-size: 3rem;
   cursor: pointer;
+  background: none;
+  border: none;
 }
   
   
