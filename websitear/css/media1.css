@@ -243,6 +243,8 @@ border-top-right-radius:2vw;
 
 .side10{
   width: 90%;
+  gap: 1vw;
+  padding: 0.2vw;
 }
 
 .av{
@@ -379,7 +381,7 @@ border-bottom: 0.2vw solid #454afa;
 
         .h2nxc{
             font-size: 2.2rem;
-            margin-top: 27vw;
+            margin-top: 20vw;
         }
            .stativ{
           width: 60%;
@@ -419,6 +421,10 @@ border-bottom: 0.2vw solid #454afa;
        }
        .imgdet{
         height: 100%;
+       }
+       
+       .h2nxcv{
+        margin-top: 27vw;
        }
        
 

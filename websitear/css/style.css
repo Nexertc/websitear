@@ -52,6 +52,7 @@ body::-webkit-scrollbar,
     
     .sideimg{
       width: 100%;
+      border-bottom: 0.2vw solid gold;
     }
 
     header {
@@ -198,7 +199,7 @@ hr{
       left: -100%;
       width: 65%;
       height: 100%;
-      background: #333;
+      background: #3b3b3b;
       color: white;
       transition: left 0.3s ease;
       z-index: 1002;
@@ -213,7 +214,7 @@ hr{
 
     .side-menu .a, .a2, .av{
       display: flex;
-      padding: 1.5vw;
+      padding: 2.5vw;
       text-decoration: none;
       color: white;
       border: 0.3vw solid #d6ad60;
@@ -224,6 +225,7 @@ hr{
       display: flex;
       align-items: center;
       justify-content: center;
+      width: 70%;
     }
 
     .side-menu .a:hover {
@@ -328,10 +330,11 @@ hr{
 
 .side10{
   display: flex;
-  gap: 3vw;
   width: 100%;
   justify-content: center;
   align-items: center;
+  padding: 2vw;
+  gap: 2vw;
 }
 
 
@@ -637,7 +640,7 @@ left: 0;
   width: 100%;
     margin-top: 10vw;
     height: 110vw;
-    background-image: url('../img/coc32hd.png');
+    background-image: url('../img/coc3.webp');
     background-position: center;
     position: relative;
     z-index: 555;
