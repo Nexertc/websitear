@@ -1,0 +1,16 @@
+.h4j, .h4x {
+    font-weight: bold;
+    margin-bottom: 0;
+    font-size: 1.45rem;
+    text-align: left;
+    width: 90%;
+    margin-top: 20vw;
+    color: black;
+}
+
+.h4x{
+    margin-bottom: 10vw;
+    margin-top: 20vw;
+    text-decoration: underline;
+}
+
