@@ -5,12 +5,13 @@
     text-align: left;
     width: 90%;
     margin-top: 20vw;
-    color: black;
+    color: #2429df;
 }
 
 .h4x{
     margin-bottom: 10vw;
     margin-top: 20vw;
     text-decoration: underline;
+    font-size: 1.2rem;
 }
 
